@@ -1,0 +1,15 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid c33f9d4c-39d4-44b7-87c2-14a9f49fd7c3)
+
+  (paper "A3")
+
+  (title_block
+    (title "LED Matrix Driving Circuitry")
+    (rev "v1.0")
+  )
+
+  (lib_symbols
+  )
+
+)

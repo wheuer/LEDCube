@@ -412,10 +412,12 @@
   },
   "libraries": {
     "pinned_footprint_libs": [
-      "LEDCube"
+      "LEDCube",
+      "SamacSys_Parts"
     ],
     "pinned_symbol_libs": [
-      "LedCube"
+      "LedCube",
+      "SamacSys_Parts"
     ]
   },
   "meta": {
@@ -498,14 +500,6 @@
     [
       "9a63682e-9260-46ec-acb0-b5bfe37f690e",
       ""
-    ],
-    [
-      "d7391bde-f68a-4291-9c0e-22c97ee140bd",
-      "PlateCircuitry"
-    ],
-    [
-      "52a84df9-d501-4f72-9ba8-7df6c9b45d04",
-      "LED Matrix"
     ]
   ],
   "text_variables": {}

@@ -6580,40 +6580,6 @@
     )
   )
 
-  (sheet (at 421.894 72.136) (size 78.232 53.848) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 52a84df9-d501-4f72-9ba8-7df6c9b45d04)
-    (property "Sheetname" "LED Matrix" (at 421.894 71.4244 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "LED_Matrix.kicad_sch" (at 421.894 126.5686 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "LEDCube"
-        (path "/9a63682e-9260-46ec-acb0-b5bfe37f690e" (page "3"))
-      )
-    )
-  )
-
-  (sheet (at 421.64 10.922) (size 77.978 53.848) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid d7391bde-f68a-4291-9c0e-22c97ee140bd)
-    (property "Sheetname" "PlateCircuitry" (at 421.64 10.2104 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "PlateCircuitry.kicad_sch" (at 421.64 65.3546 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "LEDCube"
-        (path "/9a63682e-9260-46ec-acb0-b5bfe37f690e" (page "2"))
-      )
-    )
-  )
-
   (sheet_instances
     (path "/" (page "1"))
   )

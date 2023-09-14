@@ -1,0 +1,15 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid cb4d8e0d-d89d-40ce-b5a5-93967f25d6db)
+
+  (paper "A2")
+
+  (title_block
+    (title "16x16 RGB LED Matrix")
+    (rev "v1.0")
+  )
+
+  (lib_symbols
+  )
+
+)
