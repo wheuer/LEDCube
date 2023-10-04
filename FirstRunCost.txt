@@ -1,0 +1,37 @@
+18.6696
+40.5696
+1.62
+8.112
+4.07
+2.68
+1.35
+0.248
+2.71
+9.95
+0.81
+17.7
+14
+
+
+(The following does not include shipping, case material, or magnets)
+Total for parts only $122.50
+Controller PCB (no stencil) $5.43
+Panel PCB (no stencil) $2.76
+Panel Assembly (each, includes LED cost) $4.48
+Total Per Cube: $171.37
+
+
+
+WLED Cube Comparison:
+Cheapest WLED LEDs alone @$0.0311/LED = $47.77
+Classic WS2812 WLED LEDs alone @$0.0679 = $104.29
+
+
+
+Reasons why WLED wasn't going to work:
+The WLEDs are larger 5x5xmm for the cheap ones and 2.85x3.5mm for the classic WS2812s instead of the chosen 2.1x2.1mm of the common anode version
+	-> That would mean the same size of panel could only fit a 8x8 grid rather than the 16x16
+The WLEDs are software power limited so if there was an error we could end up drawing 12mA per LED so 18A...
+	-> bruh battery go boom, not really the LDO would thermally regulate or the battery PCM would turn it off (the current design sets a hardlimit on the power draw to within operating conditions)
+Using WLEDs is boring and ruins the message of being an ode to Multiplexing
+

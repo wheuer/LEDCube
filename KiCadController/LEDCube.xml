@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\willi\Desktop\Projects\LEDCube\KiCadController\LEDCube.kicad_sch</source>
+    <date>9/26/2023 3:21:27 PM</date>
+    <tool>Eeschema 7.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Main Microcontroller and Power</title>
+        <company/>
+        <rev>V1.0</rev>
+        <date/>
+        <source>LEDCube.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C100">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>876aeb0f-247d-4217-88ab-11e2f2b54631</tstamps>
+    </comp>
+    <comp ref="C101">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38d7395e-9d40-4bd1-90f2-ab156141a421</tstamps>
+    </comp>
+    <comp ref="C102">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>707a0d8a-38d5-4eb0-940a-7284f0aad1e2</tstamps>
+    </comp>
+    <comp ref="C103">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b2116bc-032e-4a55-bfa1-532aeb20aac9</tstamps>
+    </comp>
+    <comp ref="C104">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>424c96c3-2990-4340-9a17-b1f22245b447</tstamps>
+    </comp>
+    <comp ref="C105">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5b06fba-f0f8-4751-9c3b-00425105379b</tstamps>
+    </comp>
+    <comp ref="C106">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6df98147-1f1e-4421-ab9e-bb7db97bb30f</tstamps>
+    </comp>
+    <comp ref="C107">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a9ba217-8d1f-4645-a5f5-2ffb8d9ea3a6</tstamps>
+    </comp>
+    <comp ref="C108">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a1b98b11-9117-4444-a369-66fb7757c180</tstamps>
+    </comp>
+    <comp ref="C109">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3d37438-c658-446d-a35f-5398f5e4618e</tstamps>
+    </comp>
+    <comp ref="C110">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>facb5730-2432-4abc-a624-ea323076d172</tstamps>
+    </comp>
+    <comp ref="C111">
+      <value>1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>33566717-b552-44de-93f9-7429c7892428</tstamps>
+    </comp>
+    <comp ref="D100">
+      <value>Green</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f828f9b6-8704-4724-9611-e6613944c619</tstamps>
+    </comp>
+    <comp ref="D101">
+      <value>Amber</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3f82ee39-13c1-404c-b7ad-39b2c9fb9d98</tstamps>
+    </comp>
+    <comp ref="D102">
+      <value>Blue</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a1cb390b-40bb-4dbb-a417-e44f226566b3</tstamps>
+    </comp>
+    <comp ref="H100">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8344ff97-b547-4a7d-a759-293f229a60ed</tstamps>
+    </comp>
+    <comp ref="H101">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>94947005-d565-4307-8c0a-25e6e596c7b3</tstamps>
+    </comp>
+    <comp ref="H102">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32d4e2f7-d7a1-4b3f-8724-1a9e0693ff7c</tstamps>
+    </comp>
+    <comp ref="H103">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5279b8a8-8a36-48f2-b174-21e3fa8e83a0</tstamps>
+    </comp>
+    <comp ref="IC100">
+      <value>CP2102N-A02-GQFN28</value>
+      <footprint>SamacSys_Parts:QFN50P500X500X80-29N-D</footprint>
+      <datasheet>https://componentsearchengine.com/Datasheets/2/CP2102N-A02-GQFN28.pdf</datasheet>
+      <fields>
+        <field name="Height">0.8</field>
+        <field name="Manufacturer_Name">Silicon Labs</field>
+        <field name="Manufacturer_Part_Number">CP2102N-A02-GQFN28</field>
+        <field name="Mouser Part Number">634-CP2102NA02GQFN28</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN28?qs=u16ybLDytRaSBkSkyjYFiA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="CP2102N-A02-GQFN28" description="SILICON LABS - CP2102N-A02-GQFN28 - USB TO UART BRIDGE, -40 TO 85DEG C"/>
+      <property name="Height" value="0.8"/>
+      <property name="Mouser Part Number" value="634-CP2102NA02GQFN28"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN28?qs=u16ybLDytRaSBkSkyjYFiA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Silicon Labs"/>
+      <property name="Manufacturer_Part_Number" value="CP2102N-A02-GQFN28"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="SILICON LABS - CP2102N-A02-GQFN28 - USB TO UART BRIDGE, -40 TO 85DEG C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ba08e57-3d47-49a6-98d4-23df2c4628d1</tstamps>
+    </comp>
+    <comp ref="IC101">
+      <value>MCP73833T-FCI_MF</value>
+      <footprint>SamacSys_Parts:SON50P300X300X100-11N-D</footprint>
+      <datasheet>http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en027983</datasheet>
+      <fields>
+        <field name="Height">1</field>
+        <field name="Manufacturer_Name">Microchip</field>
+        <field name="Manufacturer_Part_Number">MCP73833T-FCI/MF</field>
+        <field name="Mouser Part Number">579-MCP73833T-FCI/MF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP73833T-FCI-MF?qs=Fxu3fLyJv8c1Bo0naP05gw%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="MCP73833T-FCI_MF" description="Battery Management Charge Management Controllers"/>
+      <property name="Height" value="1"/>
+      <property name="Mouser Part Number" value="579-MCP73833T-FCI/MF"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP73833T-FCI-MF?qs=Fxu3fLyJv8c1Bo0naP05gw%3D%3D"/>
+      <property name="Manufacturer_Name" value="Microchip"/>
+      <property name="Manufacturer_Part_Number" value="MCP73833T-FCI/MF"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Battery Management Charge Management Controllers"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b3e1515-67c4-4bb5-9a8c-65d7b07ebc16</tstamps>
+    </comp>
+    <comp ref="IC102">
+      <value>ESP32-WROOM-32E-H4</value>
+      <footprint>SamacSys_Parts:ESP32WROOM32EH4</footprint>
+      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf</datasheet>
+      <fields>
+        <field name="Height">3.25</field>
+        <field name="Manufacturer_Name">Espressif Systems</field>
+        <field name="Manufacturer_Part_Number">ESP32-WROOM-32E-H4</field>
+        <field name="Mouser Part Number">356-ESP32WRM320EH3PS</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32E-H4?qs=Li%252BoUPsLEnuUxeqGSCz%252BcA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="ESP32-WROOM-32E-H4" description="Multiprotocol Modules SMD module, ESP32-D0WD-V3, ESP32 ECO V3, 4 MB SPI flash, PCB antenna, -40 C +105 C."/>
+      <property name="Height" value="3.25"/>
+      <property name="Mouser Part Number" value="356-ESP32WRM320EH3PS"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32E-H4?qs=Li%252BoUPsLEnuUxeqGSCz%252BcA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Espressif Systems"/>
+      <property name="Manufacturer_Part_Number" value="ESP32-WROOM-32E-H4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Multiprotocol Modules SMD module, ESP32-D0WD-V3, ESP32 ECO V3, 4 MB SPI flash, PCB antenna, -40 C +105 C."/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb6f7042-2d8b-41e0-851f-1a49b4e10162</tstamps>
+    </comp>
+    <comp ref="J100">
+      <value>USB4110-GF-A</value>
+      <footprint>SamacSys_Parts:USB4110GFA</footprint>
+      <datasheet>https://gct.co/files/drawings/usb4110.pdf</datasheet>
+      <fields>
+        <field name="Height">3.26</field>
+        <field name="Manufacturer_Name">GCT (GLOBAL CONNECTOR TECHNOLOGY)</field>
+        <field name="Manufacturer_Part_Number">USB4110-GF-A</field>
+        <field name="Mouser Part Number">640-USB4110-GF-A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/GCT/USB4110-GF-A?qs=KUoIvG%2F9IlYiZvIXQjyJeA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="USB4110-GF-A" description="CONN USB 2.0 TYPE-C R/A SMT"/>
+      <property name="Height" value="3.26"/>
+      <property name="Mouser Part Number" value="640-USB4110-GF-A"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/GCT/USB4110-GF-A?qs=KUoIvG%2F9IlYiZvIXQjyJeA%3D%3D"/>
+      <property name="Manufacturer_Name" value="GCT (GLOBAL CONNECTOR TECHNOLOGY)"/>
+      <property name="Manufacturer_Part_Number" value="USB4110-GF-A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="CONN USB 2.0 TYPE-C R/A SMT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>880bcc54-37ea-4499-a35a-2a98764a36b2</tstamps>
+    </comp>
+    <comp ref="J101">
+      <value>~</value>
+      <footprint>LEDCube:PowerSwitch</footprint>
+      <libsource lib="LedCube" part="PowerSwitch" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01d64f93-54d4-49e1-8ce6-1a23df0e3580</tstamps>
+    </comp>
+    <comp ref="J102">
+      <value>1769</value>
+      <footprint>SamacSys_Parts:1769</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/17311.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer_Name">Adafruit</field>
+        <field name="Manufacturer_Part_Number">1769</field>
+        <field name="Mouser Part Number">485-1769</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Adafruit/1769?qs=GURawfaeGuBbgoGtf2XstA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="1769" description="Adafruit Accessories JST-PH 2-pin SMT Right Angle Connect"/>
+      <property name="Height" value=""/>
+      <property name="Mouser Part Number" value="485-1769"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Adafruit/1769?qs=GURawfaeGuBbgoGtf2XstA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Adafruit"/>
+      <property name="Manufacturer_Part_Number" value="1769"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Adafruit Accessories JST-PH 2-pin SMT Right Angle Connect"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a0629d9-dd3d-4cd7-95f9-e5380c09b562</tstamps>
+    </comp>
+    <comp ref="J103">
+      <value>15-91-0100</value>
+      <footprint>LEDCube:CNC_TECH_SMD_10POS</footprint>
+      <datasheet>https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</datasheet>
+      <fields>
+        <field name="Height">9.79</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+        <field name="Mouser Part Number">538-15-91-0100</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="15-91-0100" description="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <property name="Height" value="9.79"/>
+      <property name="Mouser Part Number" value="538-15-91-0100"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Molex"/>
+      <property name="Manufacturer_Part_Number" value="15-91-0100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6d15fcf-40b8-4654-b777-a577ba15b7d8</tstamps>
+    </comp>
+    <comp ref="J104">
+      <value>15-91-0100</value>
+      <footprint>LEDCube:CNC_TECH_SMD_10POS</footprint>
+      <fields>
+        <field name="Height">9.79</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="15-91-0100" description="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <property name="Height" value="9.79"/>
+      <property name="Mouser Part Number" value=""/>
+      <property name="Mouser Price/Stock" value=""/>
+      <property name="Manufacturer_Name" value="Molex"/>
+      <property name="Manufacturer_Part_Number" value="15-91-0100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a7a50af-1a6b-4994-b6ea-078ba1274296</tstamps>
+    </comp>
+    <comp ref="J105">
+      <value>15-91-0100</value>
+      <footprint>LEDCube:CNC_TECH_SMD_10POS</footprint>
+      <datasheet>https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</datasheet>
+      <fields>
+        <field name="Height">9.79</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+        <field name="Mouser Part Number">538-15-91-0100</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="15-91-0100" description="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <property name="Height" value="9.79"/>
+      <property name="Mouser Part Number" value="538-15-91-0100"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Molex"/>
+      <property name="Manufacturer_Part_Number" value="15-91-0100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>90a12699-e589-44b4-9ef6-49dfce85bc68</tstamps>
+    </comp>
+    <comp ref="J106">
+      <value>15-91-0100</value>
+      <footprint>LEDCube:CNC_TECH_SMD_10POS</footprint>
+      <datasheet>https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</datasheet>
+      <fields>
+        <field name="Height">9.79</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+        <field name="Mouser Part Number">538-15-91-0100</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="15-91-0100" description="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <property name="Height" value="9.79"/>
+      <property name="Mouser Part Number" value="538-15-91-0100"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Molex"/>
+      <property name="Manufacturer_Part_Number" value="15-91-0100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>251e77a7-17d1-4ad6-b7c6-0428e9f4076a</tstamps>
+    </comp>
+    <comp ref="J107">
+      <value>15-91-0100</value>
+      <footprint>LEDCube:CNC_TECH_SMD_10POS</footprint>
+      <datasheet>https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</datasheet>
+      <fields>
+        <field name="Height">9.79</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+        <field name="Mouser Part Number">538-15-91-0100</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="15-91-0100" description="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <property name="Height" value="9.79"/>
+      <property name="Mouser Part Number" value="538-15-91-0100"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Molex"/>
+      <property name="Manufacturer_Part_Number" value="15-91-0100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>52d1679d-8a86-4e83-863b-826261c3af65</tstamps>
+    </comp>
+    <comp ref="J108">
+      <value>15-91-0100</value>
+      <footprint>LEDCube:CNC_TECH_SMD_10POS</footprint>
+      <datasheet>https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</datasheet>
+      <fields>
+        <field name="Height">9.79</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+        <field name="Mouser Part Number">538-15-91-0100</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D</field>
+      </fields>
+      <libsource lib="SamacSys_Parts" part="15-91-0100" description="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <property name="Height" value="9.79"/>
+      <property name="Mouser Part Number" value="538-15-91-0100"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Molex"/>
+      <property name="Manufacturer_Part_Number" value="15-91-0100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9a3cc0e-dfcd-4a2f-a53c-705c915f46ad</tstamps>
+    </comp>
+    <comp ref="Q100">
+      <value>Q_NMOS_GSD</value>
+      <footprint>SamacSys_Parts:SOT96P237X111-3N</footprint>
+      <libsource lib="Device" part="Q_NMOS_GSD" description="N-MOSFET transistor, gate/source/drain"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="N-MOSFET transistor, gate/source/drain"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ac2d1a5e-be87-47a6-b667-4f43a2e1fed5</tstamps>
+    </comp>
+    <comp ref="Q101">
+      <value>Q_NMOS_GSD</value>
+      <footprint>SamacSys_Parts:SOT96P237X111-3N</footprint>
+      <libsource lib="Device" part="Q_NMOS_GSD" description="N-MOSFET transistor, gate/source/drain"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="N-MOSFET transistor, gate/source/drain"/>
+      <property name="ki_keywords" value="transistor NMOS N-MOS N-MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>247d2a16-afbe-4584-8af0-1a3deb660e78</tstamps>
+    </comp>
+    <comp ref="R100">
+      <value>22.1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e407b18b-6374-4da0-b4e2-d9766021cb96</tstamps>
+    </comp>
+    <comp ref="R101">
+      <value>47.5k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>91643b81-54de-4e09-8fe9-ad462870808f</tstamps>
+    </comp>
+    <comp ref="R102">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d594bc3-b606-487a-bc16-f922f85ebdfb</tstamps>
+    </comp>
+    <comp ref="R103">
+      <value>5.1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cafbe139-5f97-4161-9e7a-f49097f6492b</tstamps>
+    </comp>
+    <comp ref="R104">
+      <value>5.1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b19b733b-6649-48c1-a100-32ab3c0c32fb</tstamps>
+    </comp>
+    <comp ref="R105">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>13bd8cfa-4bfd-461d-b9f0-0ff2cd8d8585</tstamps>
+    </comp>
+    <comp ref="R106">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4de952dc-6018-491e-a9f3-9feb51031c06</tstamps>
+    </comp>
+    <comp ref="R107">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f292fcb9-7f5f-4b42-8778-9cb7941063aa</tstamps>
+    </comp>
+    <comp ref="R108">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2d839a9-fe7a-4952-a9a9-f3bb26a7de1e</tstamps>
+    </comp>
+    <comp ref="R109">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba262d9f-7b1c-4ad4-81cb-4bf7bed935c9</tstamps>
+    </comp>
+    <comp ref="R110">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>04af019b-a429-4af7-a138-9c1c1fc9bf18</tstamps>
+    </comp>
+    <comp ref="R111">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2a16cd8f-cb82-45b7-9cf8-d561f11285de</tstamps>
+    </comp>
+    <comp ref="R112">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00b21f4a-11df-418c-a463-0cf0fe6698d5</tstamps>
+    </comp>
+    <comp ref="R113">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd9a07d4-5a66-4d3f-9bfd-891ae6e5c20a</tstamps>
+    </comp>
+    <comp ref="R114">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2a87219-a83c-42cf-bf0b-53913a22c51c</tstamps>
+    </comp>
+    <comp ref="R115">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>286f0e36-ecc1-4961-b857-64543b53cc13</tstamps>
+    </comp>
+    <comp ref="R116">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd1e1ad4-1318-4413-9d8a-630d7384d913</tstamps>
+    </comp>
+    <comp ref="R117">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>521fe165-84a0-4d0e-83e1-0423f71aa1e9</tstamps>
+    </comp>
+    <comp ref="R119">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>244150ad-332f-4117-8b6e-fe7e0bdcaeeb</tstamps>
+    </comp>
+    <comp ref="U100">
+      <value>~</value>
+      <footprint>LEDCube:MIC37300-3.3-SPAK3</footprint>
+      <libsource lib="LedCube" part="MIC37300-3.3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>51eceb9f-9f71-47de-a074-0a98bc337494</tstamps>
+    </comp>
+    <comp ref="U101">
+      <value>~</value>
+      <footprint>SamacSys_Parts:BOSCH_LGA-12</footprint>
+      <libsource lib="LedCube" part="BMA400" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LEDCube.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31dee7ee-8ad6-4de2-b0ab-f50ffbb90c1c</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NMOS_GSD">
+      <description>N-MOSFET transistor, gate/source/drain</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_GSD</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LedCube" part="BMA400">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SDO" type="passive"/>
+        <pin num="2" name="SDX" type="passive"/>
+        <pin num="3" name="VDDIO" type="passive"/>
+        <pin num="4" name="NC" type="passive"/>
+        <pin num="5" name="INT1" type="passive"/>
+        <pin num="6" name="INT2" type="passive"/>
+        <pin num="7" name="VDD" type="passive"/>
+        <pin num="8" name="GNDIO" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="CSB" type="passive"/>
+        <pin num="11" name="NC" type="passive"/>
+        <pin num="12" name="SCX" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LedCube" part="MIC37300-3.3">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="VOUT" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="LedCube" part="PowerSwitch">
+      <fields>
+        <field name="Reference">J</field>
+      </fields>
+      <pins>
+        <pin num="1" name="POS1" type="passive"/>
+        <pin num="2" name="Common" type="passive"/>
+        <pin num="3" name="POS2" type="passive"/>
+        <pin num="4" name="CASE" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="15-91-0100">
+      <description>2.54mm Pitch SL Wire-to-Board Header, Low Profile, Surface Mount, Single Row, Right-Angle, 3.05mm Pocket, Shrouded, with Press-fit Plastic Peg, 10 Circuits, Tin (Sn) Plating, Embossed Tape Packaging</description>
+      <docs>https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">15-91-0100</field>
+        <field name="Footprint">15910100</field>
+        <field name="Datasheet">https://www.molex.com/pdm_docs/sd/015916059_sd.pdf</field>
+        <field name="Height">9.79</field>
+        <field name="Mouser Part Number">538-15-91-0100</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Molex/15-91-0100?qs=UZEkBKezw1bF%2Fz6q%2FFjjLA%3D%3D</field>
+        <field name="Manufacturer_Name">Molex</field>
+        <field name="Manufacturer_Part_Number">15-91-0100</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="1769">
+      <description>Adafruit Accessories JST-PH 2-pin SMT Right Angle Connect</description>
+      <docs>https://cdn-shop.adafruit.com/datasheets/17311.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">1769</field>
+        <field name="Footprint">1769</field>
+        <field name="Datasheet">https://cdn-shop.adafruit.com/datasheets/17311.pdf</field>
+        <field name="Mouser Part Number">485-1769</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Adafruit/1769?qs=GURawfaeGuBbgoGtf2XstA%3D%3D</field>
+        <field name="Manufacturer_Name">Adafruit</field>
+        <field name="Manufacturer_Part_Number">1769</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="CP2102N-A02-GQFN28">
+      <description>SILICON LABS - CP2102N-A02-GQFN28 - USB TO UART BRIDGE, -40 TO 85DEG C</description>
+      <docs>https://componentsearchengine.com/Datasheets/2/CP2102N-A02-GQFN28.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">CP2102N-A02-GQFN28</field>
+        <field name="Footprint">QFN50P500X500X80-29N-D</field>
+        <field name="Datasheet">https://componentsearchengine.com/Datasheets/2/CP2102N-A02-GQFN28.pdf</field>
+        <field name="Height">0.8</field>
+        <field name="Mouser Part Number">634-CP2102NA02GQFN28</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN28?qs=u16ybLDytRaSBkSkyjYFiA%3D%3D</field>
+        <field name="Manufacturer_Name">Silicon Labs</field>
+        <field name="Manufacturer_Part_Number">CP2102N-A02-GQFN28</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DCD" type="input"/>
+        <pin num="2" name="RI/CLK" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="D+" type="bidirectional"/>
+        <pin num="5" name="D-" type="bidirectional"/>
+        <pin num="6" name="VDD" type="power_in"/>
+        <pin num="7" name="VREGIN" type="power_in"/>
+        <pin num="8" name="VBUS" type="input"/>
+        <pin num="9" name="RSTB" type="input"/>
+        <pin num="10" name="NC" type="no_connect"/>
+        <pin num="11" name="SUSPENDB" type="output"/>
+        <pin num="12" name="SUSPEND" type="output"/>
+        <pin num="13" name="CHREN" type="output"/>
+        <pin num="14" name="CHR1" type="output"/>
+        <pin num="15" name="CHR0" type="output"/>
+        <pin num="16" name="GPIO.3/WAKEUP" type="bidirectional"/>
+        <pin num="17" name="GPIO.2/RS485" type="bidirectional"/>
+        <pin num="18" name="GPIO.1/RXT" type="bidirectional"/>
+        <pin num="19" name="GPIO.0/TXT" type="bidirectional"/>
+        <pin num="20" name="GPIO.6" type="bidirectional"/>
+        <pin num="21" name="GPIO.5" type="bidirectional"/>
+        <pin num="22" name="GPIO.4" type="bidirectional"/>
+        <pin num="23" name="CTS" type="input"/>
+        <pin num="24" name="RTS" type="output"/>
+        <pin num="25" name="RXD" type="input"/>
+        <pin num="26" name="TXD" type="output"/>
+        <pin num="27" name="DSR" type="input"/>
+        <pin num="28" name="DTR" type="output"/>
+        <pin num="29" name="BGND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="ESP32-WROOM-32E-H4">
+      <description>Multiprotocol Modules SMD module, ESP32-D0WD-V3, ESP32 ECO V3, 4 MB SPI flash, PCB antenna, -40 C +105 C.</description>
+      <docs>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">ESP32-WROOM-32E-H4</field>
+        <field name="Footprint">ESP32WROOM32EH4</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf</field>
+        <field name="Height">3.25</field>
+        <field name="Mouser Part Number">356-ESP32WRM320EH3PS</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-WROOM-32E-H4?qs=Li%252BoUPsLEnuUxeqGSCz%252BcA%3D%3D</field>
+        <field name="Manufacturer_Name">Espressif Systems</field>
+        <field name="Manufacturer_Part_Number">ESP32-WROOM-32E-H4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND_1" type="passive"/>
+        <pin num="2" name="3V3" type="passive"/>
+        <pin num="3" name="EN" type="passive"/>
+        <pin num="4" name="SENSOR_VP" type="passive"/>
+        <pin num="5" name="SENSOR_VN" type="passive"/>
+        <pin num="6" name="IO34" type="passive"/>
+        <pin num="7" name="IO35" type="passive"/>
+        <pin num="8" name="IO32" type="passive"/>
+        <pin num="9" name="IO33" type="passive"/>
+        <pin num="10" name="IO25" type="passive"/>
+        <pin num="11" name="IO26" type="passive"/>
+        <pin num="12" name="IO27" type="passive"/>
+        <pin num="13" name="IO14" type="passive"/>
+        <pin num="14" name="IO12" type="passive"/>
+        <pin num="15" name="GND_2" type="passive"/>
+        <pin num="16" name="IO13" type="passive"/>
+        <pin num="17" name="NC_1" type="passive"/>
+        <pin num="18" name="NC_2" type="passive"/>
+        <pin num="19" name="NC_3" type="passive"/>
+        <pin num="20" name="NC_4" type="passive"/>
+        <pin num="21" name="NC_5" type="passive"/>
+        <pin num="22" name="NC_6" type="passive"/>
+        <pin num="23" name="IO15" type="passive"/>
+        <pin num="24" name="IO2" type="passive"/>
+        <pin num="25" name="IO0" type="passive"/>
+        <pin num="26" name="IO4" type="passive"/>
+        <pin num="27" name="IO16" type="passive"/>
+        <pin num="28" name="IO17" type="passive"/>
+        <pin num="29" name="IO5" type="passive"/>
+        <pin num="30" name="IO18" type="passive"/>
+        <pin num="31" name="IO19" type="passive"/>
+        <pin num="32" name="NC_7" type="passive"/>
+        <pin num="33" name="IO21" type="passive"/>
+        <pin num="34" name="RXD0" type="passive"/>
+        <pin num="35" name="TXD0" type="passive"/>
+        <pin num="36" name="IO22" type="passive"/>
+        <pin num="37" name="IO23" type="passive"/>
+        <pin num="38" name="GND_3" type="passive"/>
+        <pin num="39" name="GND_4" type="passive"/>
+        <pin num="40" name="GND_5" type="passive"/>
+        <pin num="41" name="GND_6" type="passive"/>
+        <pin num="42" name="GND_7" type="passive"/>
+        <pin num="43" name="GND_8" type="passive"/>
+        <pin num="44" name="GND_9" type="passive"/>
+        <pin num="45" name="GND_10" type="passive"/>
+        <pin num="46" name="GND_11" type="passive"/>
+        <pin num="47" name="GND_12" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="MCP73833T-FCI_MF">
+      <description>Battery Management Charge Management Controllers</description>
+      <docs>http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en027983</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">MCP73833T-FCI_MF</field>
+        <field name="Footprint">SON50P300X300X100-11N-D</field>
+        <field name="Datasheet">http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en027983</field>
+        <field name="Height">1</field>
+        <field name="Mouser Part Number">579-MCP73833T-FCI/MF</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP73833T-FCI-MF?qs=Fxu3fLyJv8c1Bo0naP05gw%3D%3D</field>
+        <field name="Manufacturer_Name">Microchip</field>
+        <field name="Manufacturer_Part_Number">MCP73833T-FCI/MF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD_1" type="passive"/>
+        <pin num="2" name="VDD_2" type="passive"/>
+        <pin num="3" name="STAT1" type="passive"/>
+        <pin num="4" name="STAT2" type="passive"/>
+        <pin num="5" name="VSS" type="passive"/>
+        <pin num="6" name="PROG" type="passive"/>
+        <pin num="7" name="~{PG}" type="passive"/>
+        <pin num="8" name="THERM" type="passive"/>
+        <pin num="9" name="VBAT_1" type="passive"/>
+        <pin num="10" name="VBAT_2" type="passive"/>
+        <pin num="11" name="EP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SamacSys_Parts" part="USB4110-GF-A">
+      <description>CONN USB 2.0 TYPE-C R/A SMT</description>
+      <docs>https://gct.co/files/drawings/usb4110.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB4110-GF-A</field>
+        <field name="Footprint">USB4110GFA</field>
+        <field name="Datasheet">https://gct.co/files/drawings/usb4110.pdf</field>
+        <field name="Height">3.26</field>
+        <field name="Mouser Part Number">640-USB4110-GF-A</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/GCT/USB4110-GF-A?qs=KUoIvG%2F9IlYiZvIXQjyJeA%3D%3D</field>
+        <field name="Manufacturer_Name">GCT (GLOBAL CONNECTOR TECHNOLOGY)</field>
+        <field name="Manufacturer_Part_Number">USB4110-GF-A</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1/GND" type="passive"/>
+        <pin num="A4" name="A4/VBUS" type="passive"/>
+        <pin num="A5" name="A5/CC1" type="passive"/>
+        <pin num="A6" name="A6/D+1" type="passive"/>
+        <pin num="A7" name="A7/D-1" type="passive"/>
+        <pin num="A8" name="A8/SBU1" type="passive"/>
+        <pin num="A9" name="A9/VBUS" type="passive"/>
+        <pin num="A12" name="A12/GND" type="passive"/>
+        <pin num="B1" name="B1/GND" type="passive"/>
+        <pin num="B4" name="B4/VBUS" type="passive"/>
+        <pin num="B5" name="B5/CC2" type="passive"/>
+        <pin num="B6" name="B6/D+2" type="passive"/>
+        <pin num="B7" name="B7/D-2" type="passive"/>
+        <pin num="B8" name="B8/SBU2" type="passive"/>
+        <pin num="B9" name="B9/VBUS" type="passive"/>
+        <pin num="B12" name="B12/GND" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+        <pin num="MP3" name="MP3" type="passive"/>
+        <pin num="MP4" name="MP4" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="LedCube">
+      <uri>C:\Users\willi\Desktop\Projects\LEDCube\KiCadController/LedCube.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="SamacSys_Parts">
+      <uri>C:/Users/willi/Desktop/MouserComponentLibrary/SamacSys_Parts.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="C109" pin="1" pintype="passive"/>
+      <node ref="C110" pin="1" pintype="passive"/>
+      <node ref="IC102" pin="2" pinfunction="3V3" pintype="passive"/>
+      <node ref="J103" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J104" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J105" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J106" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J107" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J108" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R116" pin="1" pintype="passive"/>
+      <node ref="R117" pin="1" pintype="passive"/>
+      <node ref="R119" pin="1" pintype="passive"/>
+      <node ref="U100" pin="3" pinfunction="VOUT" pintype="input"/>
+      <node ref="U101" pin="10" pinfunction="CSB" pintype="passive"/>
+      <node ref="U101" pin="3" pinfunction="VDDIO" pintype="passive"/>
+      <node ref="U101" pin="7" pinfunction="VDD" pintype="passive"/>
+    </net>
+    <net code="2" name="BMA400_INT1">
+      <node ref="IC102" pin="6" pinfunction="IO34" pintype="passive"/>
+      <node ref="U101" pin="5" pinfunction="INT1" pintype="passive"/>
+    </net>
+    <net code="3" name="BRIGHTNESS_PWM">
+      <node ref="IC102" pin="37" pinfunction="IO23" pintype="passive"/>
+      <node ref="J103" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="J104" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="J105" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="J106" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="J107" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="J108" pin="9" pinfunction="9" pintype="passive"/>
+    </net>
+    <net code="4" name="CP2102_VDD">
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="IC100" pin="6" pinfunction="VDD" pintype="power_in"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+    </net>
+    <net code="5" name="D+">
+      <node ref="IC100" pin="4" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="J100" pin="A6" pinfunction="A6/D+1" pintype="passive"/>
+      <node ref="J100" pin="B6" pinfunction="B6/D+2" pintype="passive"/>
+    </net>
+    <net code="6" name="D-">
+      <node ref="IC100" pin="5" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="J100" pin="A7" pinfunction="A7/D-1" pintype="passive"/>
+      <node ref="J100" pin="B7" pinfunction="B7/D-2" pintype="passive"/>
+    </net>
+    <net code="7" name="DTR">
+      <node ref="IC100" pin="28" pinfunction="DTR" pintype="output"/>
+      <node ref="R110" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="EN">
+      <node ref="C111" pin="1" pintype="passive"/>
+      <node ref="IC102" pin="3" pinfunction="EN" pintype="passive"/>
+      <node ref="Q101" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R119" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="GND">
+      <node ref="C100" pin="2" pintype="passive"/>
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="C109" pin="2" pintype="passive"/>
+      <node ref="C110" pin="2" pintype="passive"/>
+      <node ref="C111" pin="2" pintype="passive"/>
+      <node ref="IC100" pin="29" pinfunction="BGND" pintype="power_in"/>
+      <node ref="IC100" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="IC101" pin="11" pinfunction="EP" pintype="passive"/>
+      <node ref="IC101" pin="5" pinfunction="VSS" pintype="passive"/>
+      <node ref="IC102" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="IC102" pin="15" pinfunction="GND_2" pintype="passive"/>
+      <node ref="IC102" pin="38" pinfunction="GND_3" pintype="passive"/>
+      <node ref="IC102" pin="39" pinfunction="GND_4" pintype="passive"/>
+      <node ref="IC102" pin="40" pinfunction="GND_5" pintype="passive"/>
+      <node ref="IC102" pin="41" pinfunction="GND_6" pintype="passive"/>
+      <node ref="IC102" pin="42" pinfunction="GND_7" pintype="passive"/>
+      <node ref="IC102" pin="43" pinfunction="GND_8" pintype="passive"/>
+      <node ref="IC102" pin="44" pinfunction="GND_9" pintype="passive"/>
+      <node ref="IC102" pin="45" pinfunction="GND_10" pintype="passive"/>
+      <node ref="IC102" pin="46" pinfunction="GND_11" pintype="passive"/>
+      <node ref="IC102" pin="47" pinfunction="GND_12" pintype="passive"/>
+      <node ref="J100" pin="A1" pinfunction="A1/GND" pintype="passive"/>
+      <node ref="J100" pin="A12" pinfunction="A12/GND" pintype="passive"/>
+      <node ref="J100" pin="B1" pinfunction="B1/GND" pintype="passive"/>
+      <node ref="J100" pin="B12" pinfunction="B12/GND" pintype="passive"/>
+      <node ref="J101" pin="1" pinfunction="POS1" pintype="passive"/>
+      <node ref="J101" pin="4" pinfunction="CASE" pintype="passive"/>
+      <node ref="J102" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="J103" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="J104" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="J105" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="J106" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="J107" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="J108" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="R109" pin="2" pintype="passive"/>
+      <node ref="R111" pin="2" pintype="passive"/>
+      <node ref="R113" pin="2" pintype="passive"/>
+      <node ref="R115" pin="2" pintype="passive"/>
+      <node ref="U100" pin="2" pinfunction="GND" pintype="input"/>
+      <node ref="U101" pin="1" pinfunction="SDO" pintype="passive"/>
+      <node ref="U101" pin="8" pinfunction="GNDIO" pintype="passive"/>
+      <node ref="U101" pin="9" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="10" name="IO0">
+      <node ref="IC102" pin="25" pinfunction="IO0" pintype="passive"/>
+      <node ref="Q100" pin="3" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="11" name="LATCH">
+      <node ref="IC102" pin="30" pinfunction="IO18" pintype="passive"/>
+      <node ref="J103" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J104" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J105" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J106" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J107" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J108" pin="5" pinfunction="5" pintype="passive"/>
+    </net>
+    <net code="12" name="MASTER_CLK">
+      <node ref="IC102" pin="33" pinfunction="IO21" pintype="passive"/>
+      <node ref="J103" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="J104" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="J105" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="J106" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="J107" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="J108" pin="7" pinfunction="7" pintype="passive"/>
+    </net>
+    <net code="13" name="MUX_B0">
+      <node ref="IC102" pin="36" pinfunction="IO22" pintype="passive"/>
+      <node ref="J103" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="J104" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="J105" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="J106" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="J107" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="J108" pin="8" pinfunction="8" pintype="passive"/>
+    </net>
+    <net code="14" name="MUX_B1">
+      <node ref="IC102" pin="31" pinfunction="IO19" pintype="passive"/>
+      <node ref="J103" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J104" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J105" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J106" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J107" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J108" pin="6" pinfunction="6" pintype="passive"/>
+    </net>
+    <net code="15" name="MUX_B2">
+      <node ref="IC102" pin="26" pinfunction="IO4" pintype="passive"/>
+      <node ref="J103" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J104" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J105" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J106" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J107" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J108" pin="4" pinfunction="4" pintype="passive"/>
+    </net>
+    <net code="16" name="MUX_B3">
+      <node ref="IC102" pin="28" pinfunction="IO17" pintype="passive"/>
+      <node ref="J103" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J104" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J105" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J106" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J107" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J108" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(D100-A)">
+      <node ref="D100" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(D100-K)">
+      <node ref="D100" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC101" pin="4" pinfunction="STAT2" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(D101-A)">
+      <node ref="D101" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R107" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D101-K)">
+      <node ref="D101" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC101" pin="3" pinfunction="STAT1" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(D102-A)">
+      <node ref="D102" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D102-K)">
+      <node ref="D102" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC101" pin="7" pinfunction="~{PG}" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(IC100-RSTB)">
+      <node ref="IC100" pin="9" pinfunction="RSTB" pintype="input"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(IC100-VBUS)">
+      <node ref="IC100" pin="8" pinfunction="VBUS" pintype="input"/>
+      <node ref="R100" pin="2" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(IC101-PROG)">
+      <node ref="IC101" pin="6" pinfunction="PROG" pintype="passive"/>
+      <node ref="R111" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(IC101-THERM)">
+      <node ref="IC101" pin="8" pinfunction="THERM" pintype="passive"/>
+      <node ref="R109" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(J100-A5{slash}CC1)">
+      <node ref="J100" pin="A5" pinfunction="A5/CC1" pintype="passive"/>
+      <node ref="R103" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(J100-B5{slash}CC2)">
+      <node ref="J100" pin="B5" pinfunction="B5/CC2" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(J101-POS2)">
+      <node ref="J101" pin="3" pinfunction="POS2" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="+" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(Q100-G)">
+      <node ref="Q100" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q101" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(Q100-S)">
+      <node ref="Q100" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q101" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R110" pin="1" pintype="passive"/>
+    </net>
+    <net code="32" name="RTS">
+      <node ref="IC100" pin="24" pinfunction="RTS" pintype="output"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+    </net>
+    <net code="33" name="RXD">
+      <node ref="IC100" pin="25" pinfunction="RXD" pintype="input"/>
+      <node ref="IC102" pin="35" pinfunction="TXD0" pintype="passive"/>
+    </net>
+    <net code="34" name="SCL">
+      <node ref="IC102" pin="9" pinfunction="IO33" pintype="passive"/>
+      <node ref="R116" pin="2" pintype="passive"/>
+      <node ref="U101" pin="12" pinfunction="SCX" pintype="passive"/>
+    </net>
+    <net code="35" name="SDA">
+      <node ref="IC102" pin="8" pinfunction="IO32" pintype="passive"/>
+      <node ref="R117" pin="2" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="SDX" pintype="passive"/>
+    </net>
+    <net code="36" name="SERIAL_IN0">
+      <node ref="IC102" pin="27" pinfunction="IO16" pintype="passive"/>
+      <node ref="J104" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="37" name="SERIAL_IN1">
+      <node ref="IC102" pin="10" pinfunction="IO25" pintype="passive"/>
+      <node ref="J103" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="38" name="SERIAL_IN2">
+      <node ref="IC102" pin="11" pinfunction="IO26" pintype="passive"/>
+      <node ref="J106" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="39" name="SERIAL_IN3">
+      <node ref="IC102" pin="12" pinfunction="IO27" pintype="passive"/>
+      <node ref="J105" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="40" name="SERIAL_IN4">
+      <node ref="IC102" pin="13" pinfunction="IO14" pintype="passive"/>
+      <node ref="J108" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="41" name="SERIAL_IN5">
+      <node ref="IC102" pin="16" pinfunction="IO13" pintype="passive"/>
+      <node ref="J107" pin="3" pinfunction="3" pintype="passive"/>
+    </net>
+    <net code="42" name="TXD">
+      <node ref="IC100" pin="26" pinfunction="TXD" pintype="output"/>
+      <node ref="IC102" pin="34" pinfunction="RXD0" pintype="passive"/>
+    </net>
+    <net code="43" name="VBAT">
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="IC101" pin="10" pinfunction="VBAT_2" pintype="passive"/>
+      <node ref="IC101" pin="9" pinfunction="VBAT_1" pintype="passive"/>
+      <node ref="J101" pin="2" pinfunction="Common" pintype="passive"/>
+      <node ref="R112" pin="1" pintype="passive"/>
+      <node ref="U100" pin="1" pinfunction="VIN" pintype="input"/>
+    </net>
+    <net code="44" name="VBAT_SENSE">
+      <node ref="IC102" pin="7" pinfunction="IO35" pintype="passive"/>
+      <node ref="R112" pin="2" pintype="passive"/>
+      <node ref="R113" pin="1" pintype="passive"/>
+    </net>
+    <net code="45" name="VBUS">
+      <node ref="C100" pin="1" pintype="passive"/>
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="IC100" pin="7" pinfunction="VREGIN" pintype="power_in"/>
+      <node ref="IC101" pin="1" pinfunction="VDD_1" pintype="passive"/>
+      <node ref="IC101" pin="2" pinfunction="VDD_2" pintype="passive"/>
+      <node ref="J100" pin="A4" pinfunction="A4/VBUS" pintype="passive"/>
+      <node ref="J100" pin="A9" pinfunction="A9/VBUS" pintype="passive"/>
+      <node ref="J100" pin="B4" pinfunction="B4/VBUS" pintype="passive"/>
+      <node ref="J100" pin="B9" pinfunction="B9/VBUS" pintype="passive"/>
+      <node ref="R100" pin="1" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="R114" pin="1" pintype="passive"/>
+    </net>
+    <net code="46" name="VBUS_SENSE">
+      <node ref="IC102" pin="4" pinfunction="SENSOR_VP" pintype="passive"/>
+      <node ref="R114" pin="2" pintype="passive"/>
+      <node ref="R115" pin="1" pintype="passive"/>
+    </net>
+    <net code="47" name="unconnected-(IC100-CHR0-Pad15)">
+      <node ref="IC100" pin="15" pinfunction="CHR0" pintype="output+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(IC100-CHR1-Pad14)">
+      <node ref="IC100" pin="14" pinfunction="CHR1" pintype="output+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(IC100-CHREN-Pad13)">
+      <node ref="IC100" pin="13" pinfunction="CHREN" pintype="output+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(IC100-CTS-Pad23)">
+      <node ref="IC100" pin="23" pinfunction="CTS" pintype="input+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(IC100-DCD-Pad1)">
+      <node ref="IC100" pin="1" pinfunction="DCD" pintype="input+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(IC100-DSR-Pad27)">
+      <node ref="IC100" pin="27" pinfunction="DSR" pintype="input+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(IC100-GPIO.0{slash}TXT-Pad19)">
+      <node ref="IC100" pin="19" pinfunction="GPIO.0/TXT" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(IC100-GPIO.1{slash}RXT-Pad18)">
+      <node ref="IC100" pin="18" pinfunction="GPIO.1/RXT" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(IC100-GPIO.2{slash}RS485-Pad17)">
+      <node ref="IC100" pin="17" pinfunction="GPIO.2/RS485" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(IC100-GPIO.3{slash}WAKEUP-Pad16)">
+      <node ref="IC100" pin="16" pinfunction="GPIO.3/WAKEUP" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(IC100-GPIO.4-Pad22)">
+      <node ref="IC100" pin="22" pinfunction="GPIO.4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(IC100-GPIO.5-Pad21)">
+      <node ref="IC100" pin="21" pinfunction="GPIO.5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(IC100-GPIO.6-Pad20)">
+      <node ref="IC100" pin="20" pinfunction="GPIO.6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(IC100-NC-Pad10)">
+      <node ref="IC100" pin="10" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(IC100-RI{slash}CLK-Pad2)">
+      <node ref="IC100" pin="2" pinfunction="RI/CLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(IC100-SUSPEND-Pad12)">
+      <node ref="IC100" pin="12" pinfunction="SUSPEND" pintype="output+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(IC100-SUSPENDB-Pad11)">
+      <node ref="IC100" pin="11" pinfunction="SUSPENDB" pintype="output+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(IC102-IO2-Pad24)">
+      <node ref="IC102" pin="24" pinfunction="IO2" pintype="passive+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(IC102-IO5-Pad29)">
+      <node ref="IC102" pin="29" pinfunction="IO5" pintype="passive+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(IC102-IO12-Pad14)">
+      <node ref="IC102" pin="14" pinfunction="IO12" pintype="passive+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(IC102-IO15-Pad23)">
+      <node ref="IC102" pin="23" pinfunction="IO15" pintype="passive+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(IC102-NC_1-Pad17)">
+      <node ref="IC102" pin="17" pinfunction="NC_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(IC102-NC_2-Pad18)">
+      <node ref="IC102" pin="18" pinfunction="NC_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(IC102-NC_3-Pad19)">
+      <node ref="IC102" pin="19" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(IC102-NC_4-Pad20)">
+      <node ref="IC102" pin="20" pinfunction="NC_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(IC102-NC_5-Pad21)">
+      <node ref="IC102" pin="21" pinfunction="NC_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(IC102-NC_6-Pad22)">
+      <node ref="IC102" pin="22" pinfunction="NC_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(IC102-NC_7-Pad32)">
+      <node ref="IC102" pin="32" pinfunction="NC_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(IC102-SENSOR_VN-Pad5)">
+      <node ref="IC102" pin="5" pinfunction="SENSOR_VN" pintype="passive+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(J100-A8{slash}SBU1-PadA8)">
+      <node ref="J100" pin="A8" pinfunction="A8/SBU1" pintype="passive+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(J100-B8{slash}SBU2-PadB8)">
+      <node ref="J100" pin="B8" pinfunction="B8/SBU2" pintype="passive+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(J100-PadMP1)">
+      <node ref="J100" pin="MP1" pinfunction="MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(J100-PadMP2)">
+      <node ref="J100" pin="MP2" pinfunction="MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(J100-PadMP3)">
+      <node ref="J100" pin="MP3" pinfunction="MP3" pintype="passive+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(J100-PadMP4)">
+      <node ref="J100" pin="MP4" pinfunction="MP4" pintype="passive+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U101-INT2-Pad6)">
+      <node ref="U101" pin="6" pinfunction="INT2" pintype="passive+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U101-NC-Pad4)">
+      <node ref="U101" pin="4" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U101-NC-Pad11)">
+      <node ref="U101" pin="11" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

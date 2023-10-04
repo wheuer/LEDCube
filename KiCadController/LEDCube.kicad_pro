@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 3.35,
+          "width": 3.35
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -178,7 +178,9 @@
         0.15,
         0.3,
         0.3493,
-        0.59
+        0.59,
+        0.8,
+        1.0
       ],
       "via_dimensions": [
         {
@@ -463,7 +465,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 299,
+    "annotate_start_num": 99,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
