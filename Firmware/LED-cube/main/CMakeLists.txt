@@ -1,0 +1,1 @@
+idf_component_register(SRCS "cube.c" "main.cpp" "AdafruitGFX/glcdfont.c" "AdafruitGFX/LEDCubePort.cpp" "AdafruitGFX/Adafruit_GFX.cpp" INCLUDE_DIRS "." REQUIRES esp_timer REQUIRES esp_driver_gpio REQUIRES esp_driver_ledc)

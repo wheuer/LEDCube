@@ -63,8 +63,14 @@
       39,
       40
     ],
-    "visible_layers": "ffc1fff_fffffff9",
+    "visible_layers": "ffc1ffc_7ffffff8",
     "zone_display_mode": 0
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "LEDCube.kicad_prl",
