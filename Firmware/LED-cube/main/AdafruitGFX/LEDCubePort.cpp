@@ -1,10 +1,20 @@
 #include "cube.h"
 #include "AdafruitGFX/LEDCubePort.h"
 
+
+void LedCubePanel::setPanelNumber(uint8_t panelNumber)
+{
+    this->panelIndex = panelNumber;
+}
+
 // This function is how the AdafruitGFX routines interact with the cube panels
 // This is rather slow, but the panels are limited to 16x16
 void LedCubePanel::drawPixel(int16_t x, int16_t y, uint16_t color)
 {
+    // Out of bounds check, this is absolutely needed as the setPixel below does not check which could lead to buffer overflow
+    // This *shouldn't* induce too much speed penalties, if it does there'll need to be a better solution
+    if (x > 15 || x < 0 || y > 15 || y < 0 || this->panelIndex > 5) return;
+
     // Color that we are given is a 16 bit, 5-6-5, pixel color. Need to isolate and scale
     uint8_t blue = color & 0x1F;
     uint8_t green = (color & 0x7E0) >> 5;

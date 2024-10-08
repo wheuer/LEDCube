@@ -9,6 +9,7 @@
 #include "driver/ledc.h"
 #include "esp_random.h"
 #include "esp_timer.h"
+#include "esp_random.h"
 #include "soc/soc.h"
 #include "soc/gpio_reg.h"
 
@@ -20,9 +21,36 @@ static esp_timer_handle_t cubeTickTimer;
 // Two values for all panels, first value are the bits to set and the second are the bits to clear
 static uint32_t fastFrameBuffer[NUM_ROWS * NUM_COLUMNS * 3 * 2]; // 3 LEDs (RGB) per LED and 2 values per LED 
 bool frameBuffer[6][NUM_ROWS * NUM_COLUMNS * 3];
+static uint32_t randomBuffer[(6 * NUM_ROWS * NUM_COLUMNS * 3) / 32];
+
+// Fill all buffers with random values
+void fillRandom(void)
+{
+    // Cannot use random values directly as we are using bools to store the LED states
+    // Instead we can use the bits themselves of the random numbers as the source of entropy
+    // To do this we need enough bits for (6 * NUM_ROWS * NUM_COLUMNS * 3) / 8 bytes
+    esp_fill_random(randomBuffer, (6 * NUM_ROWS * NUM_COLUMNS * 3) / 8);
+    
+    uint32_t panelBufferIndex = 0;
+    uint32_t randomBufferIndex = 0;
+    for (int i = 0; i < 6; i++)
+    {
+        while (panelBufferIndex < NUM_ROWS * NUM_COLUMNS * 3)
+        {
+            for (int j = 0; j < 32; j++)
+            {
+                if (randomBuffer[randomBufferIndex] & (1 << j)) frameBuffer[i][panelBufferIndex++] = true;
+                else frameBuffer[i][panelBufferIndex++] = false;
+            }
+            randomBufferIndex++;
+        }
+        panelBufferIndex = 0;
+    }
+}
 
 void setPixel(uint8_t panel, uint8_t x, uint8_t y, rgb_t color)
 {
+    // No out of bounds check here for the sake of speed, need to handle before calling this function
     frameBuffer[panel][((y * NUM_COLUMNS + x) * 3) + 0] = color.red;
     frameBuffer[panel][((y * NUM_COLUMNS + x) * 3) + 1] = color.green;
     frameBuffer[panel][((y * NUM_COLUMNS + x) * 3) + 2] = color.blue;
@@ -33,6 +61,7 @@ void clearPanel(uint8_t panel)
     memset(frameBuffer[panel], 0, sizeof(frameBuffer[panel]));
 }
 
+// Brightness of all of the panels (tied together in hardware)
 void setBrightness(float brightness)
 {
     ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, (uint16_t) 8192 * (1 - brightness));
@@ -193,6 +222,7 @@ void cubeInit(void)
     } 
 }
 
+// Start the timer responseable for performing the scan line updating
 void cubeStart(void)
 {
     esp_timer_start_periodic(cubeTickTimer, 1000); // 1 ms period

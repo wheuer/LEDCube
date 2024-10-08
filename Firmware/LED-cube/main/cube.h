@@ -58,6 +58,7 @@ typedef struct
 
 extern bool frameBuffer[6][NUM_ROWS * NUM_COLUMNS * 3];
 
+void fillRandom(void);
 void cubeInit(void);
 void cubeStart(void);
 void cubePause(void);
