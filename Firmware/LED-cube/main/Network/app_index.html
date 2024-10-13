@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LED Cube</title>
+    </head>
+    <body>
+        <script defer>
+            // Send a GET request for the battery voltage every 2500 ms
+            async function requestBatteryVoltage() {
+                try {
+                    const response = await fetch('/battery-voltage');
+                    if (!response.ok) throw new Error(`Battery Voltage Response Status: ${response.status}`);
+                    const data = await response.text();
+                    console.log(data);
+                } catch (error) {
+                    console.log(error.message);
+                }
+            }
+            setInterval(requestBatteryVoltage, 2500);
+        </script>
+
+        <p>Select an active light theme:</p>
+        <form action="/light-effect" method="POST">
+            <input type="radio" id="red" name="theme" value="0">
+            <label for="red">All Red</label><br>
+            <input type="radio" id="green" name="theme" value="1">
+            <label for="green">All Green</label><br>
+            <input type="radio" id="blue" name="theme" value="2">
+            <label for="blue">All Blue</label><br>
+            <input type="radio" id="noise" name="theme" value="3">
+            <label for="noise">Noise</label><br>
+            <br>
+            <button type="submit">Update Theme</button>
+        </form> 
+
+
+    </body>
+</html>

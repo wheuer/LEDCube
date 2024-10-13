@@ -14,13 +14,21 @@
         "board/esp32-wrover-kit-3.3v.cfg"
     ],
     "idf.flashType": "UART",
-    "idf.portWin": "COM3",
+    "idf.portWin": "COM8",
     "files.associations": {
         "network.h": "c",
         "wifi.h": "c",
         "http_server.h": "c",
         "esp_http_server.h": "c",
         "esp_netif.h": "c",
-        "byteswap.h": "c"
+        "byteswap.h": "c",
+        "esp_event.h": "c",
+        "esp_check.h": "c",
+        "battery.h": "c",
+        "gpio.h": "c",
+        "format": "c",
+        "task.h": "c",
+        "random": "c",
+        "nvs_flash.h": "c"
     }
 }

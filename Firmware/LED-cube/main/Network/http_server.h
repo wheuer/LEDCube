@@ -7,7 +7,8 @@
 extern "C" {
 #endif
 
-esp_err_t startServer(void);
+esp_err_t appGETHandler(httpd_req_t* request);
+esp_err_t appPOSTHandler(httpd_req_t* request);
 
 #ifdef __cplusplus
 }

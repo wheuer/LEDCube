@@ -3,12 +3,15 @@
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
+#include <esp_log.h>
 #include "driver/gpio.h"
 
 #include "AdafruitGFX/Adafruit_GFX.h"
 #include "AdafruitGFX/LEDCubePort.h"
 #include "cube.h"
 #include "Network/network.h"
+#include "Power/battery.h"
+#include "Power/charger.h"
 
 #define PURE_RED    0xF800
 #define PURE_GREEN  0x07E0
@@ -21,6 +24,8 @@ typedef enum LIGHT_MODE {
     MODE_BLUE,
     MODE_RANDOM,
 } LIGHT_MODE;
+
+const static char* TAG = "[MAIN]";
 
 LedCubePanel panels[6];
 LIGHT_MODE currentLightMode;
@@ -40,9 +45,9 @@ extern "C" void app_main(void)
 
     // initPanels();
 
-    // cubeInit();
-    // setBrightness(0.25);
-    // cubeStart();
+    cubeInit();
+    setBrightness(0);
+    cubeStart();
     
     // while (1)
     // {
@@ -50,9 +55,32 @@ extern "C" void app_main(void)
     //     vTaskDelay(200 / portTICK_PERIOD_MS);
     // }
 
-    printf("Hopefully this works...");
-    networkLaunch();
+    // printf("Hopefully this works...");
+    // networkLaunch();
+    // initBattery();
 
-    
+    // for (int i = 0; i < 20; i++)
+    // {
+    //     ESP_LOGI(TAG, "Battery voltage: %.2f", readBatteryVoltage());
+    //     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    // }
+
+    // deinitBattery();
+
+    initCharger();
+
+    while (1)
+    {
+        if (isCharging())
+        {
+            setBrightness(0);
+        }
+        else 
+        {
+            setBrightness(0.20);
+        }
+        fillRandom();
+        vTaskDelay(200 / portTICK_PERIOD_MS);
+    }
 }
 
