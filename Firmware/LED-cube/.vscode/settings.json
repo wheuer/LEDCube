@@ -18,6 +18,9 @@
     "files.associations": {
         "network.h": "c",
         "wifi.h": "c",
-        "http_server.h": "c"
+        "http_server.h": "c",
+        "esp_http_server.h": "c",
+        "esp_netif.h": "c",
+        "byteswap.h": "c"
     }
 }
