@@ -16,7 +16,6 @@ void initBattery(void);
 void deinitBattery(void);
 float readBatteryVoltage(void);
 
-
 #ifdef __cplusplus
 }
 #endif

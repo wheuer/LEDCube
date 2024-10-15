@@ -7,27 +7,11 @@
 
 const static char* TAG = "[POWER-CHARGER]";
 
-static esp_timer_handle_t chargerUpdateTimer;
-volatile static bool chargeStatus = false;
-
-static void updateChargingStatus(void* args)
+bool isCharging(void)
 {
     // Unfortunately the VBUS pin voltage should be ~2.5V with the VOH voltage of the ESP32 being 2.475V
     // If this basic reading is unreliable we can use the ADC 
-    if (gpio_get_level(VBUS_SENSE_PIN))
-    {
-        chargeStatus = true;
-    }
-    else 
-    {
-        chargeStatus = false;
-    }
-    ESP_LOGI(TAG, "Charge status: %d", chargeStatus);
-}
-
-bool isCharging(void)
-{
-    return chargeStatus;
+    return gpio_get_level(VBUS_SENSE_PIN);
 }
 
 void initCharger(void)
@@ -41,22 +25,4 @@ void initCharger(void)
     myGPIO.pull_down_en = 0;
     myGPIO.pull_up_en = 0;
     gpio_config(&myGPIO);
-
-    // Since we cannot use interrupts :( we will have to have a periodic polling timer
-    esp_timer_create_args_t updateChargingStatusTimerConfig = {
-        .callback = updateChargingStatus,
-        .arg = NULL,
-        .dispatch_method = ESP_TIMER_TASK,
-        .name = "ChargerUpdateTimer",
-        true // Skip unhandeled events in light sleep
-    };
-    esp_timer_create(&updateChargingStatusTimerConfig, &chargerUpdateTimer);
-
-    // Start updating the charger status every 500 ms
-    esp_timer_start_periodic(chargerUpdateTimer, 500 * 1000);
-}
-
-void deinitCharger(void)
-{
-    esp_timer_stop(chargerUpdateTimer);
 }

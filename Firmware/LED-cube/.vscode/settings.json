@@ -29,6 +29,11 @@
         "format": "c",
         "task.h": "c",
         "random": "c",
-        "nvs_flash.h": "c"
+        "nvs_flash.h": "c",
+        "http_app.h": "c",
+        "wifi_manager.h": "c",
+        "power.h": "c",
+        "charger.h": "c",
+        "freertos.h": "c"
     }
 }

@@ -12,7 +12,6 @@ extern "C" {
 
 void initCharger(void);
 bool isCharging(void);
-void deinitCharger(void);
 
 #ifdef __cplusplus
 }

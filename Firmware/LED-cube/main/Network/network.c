@@ -17,7 +17,7 @@
 
 static const char *TAG = "[NETWORK]";
 
-static EventGroupHandle_t   wifiEventGroup; 
+static EventGroupHandle_t wifiEventGroup; 
 
 void connectionSuccessCallback(void *pvParameter){
     // Passed parameter will contain the newly received IP
@@ -49,6 +49,9 @@ void networkLaunch(void)
 {
     // Create event group to wait on WiFi connection status
     wifiEventGroup = xEventGroupCreate();
+
+    // Perform any initilization for app's HTTP server 
+    appServerInit();
 
     // Start WiFi manager, this will begin trying to connect to the WiFi
     // If no/invalid credentials are saved in flash it will also start the soft AP for SSID/pwd setup

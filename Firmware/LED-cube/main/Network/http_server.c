@@ -6,10 +6,17 @@
 #include "http_app.h"
 
 #include "Network/http_server.h"
+#include "Power/power.h"
+#include "effects.h"
 
 #define MIN(a,b) ((a) < (b) ? a : b)
 
 static const char* TAG = "[NETWORK-HTTP_SERVER]";
+
+QueueHandle_t newEffectQueueHandle;
+static uint8_t newEffectQueueBuffer[sizeof(CubeEffectMessage) * EFFECT_QUEUE_MAX_ITEMS];
+static StaticQueue_t newEffectQueue;
+static CubeEffectMessage newCubeEffect;
 
 extern const uint8_t app_index_html_start[] asm("_binary_app_index_html_start");
 extern const uint8_t app_index_html_end[] asm("_binary_app_index_html_end");
@@ -24,8 +31,13 @@ esp_err_t appGETHandler(httpd_req_t* request)
     }
     else if (strcmp(request->uri, "/battery-voltage") == 0) 
     {
+        // Read battery voltage and send as a string
+        // Only give 2 decimal precision, limited by ADC anyway
+        float voltage = getBatteryVoltage();
+        char buffer[5];
+        snprintf(buffer, 5, "%.2f", voltage);
         httpd_resp_set_status(request, http_200_hdr);
-        httpd_resp_send(request, "3.957", HTTPD_RESP_USE_STRLEN);
+        httpd_resp_send(request, buffer, HTTPD_RESP_USE_STRLEN);
     }
     else
     {
@@ -38,7 +50,7 @@ esp_err_t appGETHandler(httpd_req_t* request)
 
 esp_err_t appPOSTHandler(httpd_req_t* request)
 {
-    char buf[100];
+    char buf[128];
     int ret;
     int remaining = request->content_len;
 
@@ -63,16 +75,34 @@ esp_err_t appPOSTHandler(httpd_req_t* request)
         // Try and decode the request
         if(strcmp(request->uri, "/light-effect") == 0)
         {
-            // Looking for a "theme" value to set as the active LED theme
+            // Looking for a "theme" and "brightness" value to set as the active LED theme
             char response[16];
+            float newBrightness = -1;
+            Effect newEffect = INVALID;
+        
             if (httpd_query_key_value(buf, "theme", response, 15) == ESP_OK)
             {
-                ESP_LOGI(TAG, "Found light effect match: %c", response[0]);
+                // atoi returns 0 (INVALID effect) if unable to resolve a number
+                newEffect = (Effect) atoi(response);
+                if (newEffect >= EFFECT_COUNT_OVERFLOW) newEffect = 0;
             }
-            else
+
+            if (httpd_query_key_value(buf, "brightness", response, 15) == ESP_OK)
             {
-                ESP_LOGI(TAG, "Got light effect POST but could not find light effect match");
-            } 
+                newBrightness = atoi(response) / 100.0f;
+                if (newBrightness > 1.0) newBrightness = 1.0;
+            }
+        
+            // Set effect values and send to effect queue
+            // We will ignore if the queue is full
+            newCubeEffect.brightness = newBrightness;
+            newCubeEffect.activeEffect = newEffect;
+            xQueueSend(newEffectQueueHandle, &newCubeEffect, (TickType_t) 0);
+            ESP_LOGI(TAG, "New effect received (effect=%d) (brightness=%.2f)", newEffect, newBrightness);
+
+            // Message should be <128 bytes (smaller than any intermediate buffers) 
+            // Break to avoid sending multiple queue items
+            break;
         }
     }
 
@@ -83,123 +113,10 @@ esp_err_t appPOSTHandler(httpd_req_t* request)
     return ESP_OK;
 }
 
-
-// static esp_err_t homeGETHandler(httpd_req_t *req)
-// {
-//     httpd_resp_send(req, indexHTML, HTTPD_RESP_USE_STRLEN);
-
-//     return ESP_OK;
-// }
-
-// static esp_err_t lightEffectPOSTHandler(httpd_req_t *req)
-// {
-//     char buf[100];
-//     int ret;
-//     int remaining = req->content_len;
-
-//     while (remaining > 0) 
-//     {
-//         // Read the data for the request, ret should be the length of data that was read
-//         ret = httpd_req_recv(req, buf, MIN(remaining, sizeof(buf)));
-//         if (ret <= 0)
-//         {
-//             if (ret == HTTPD_SOCK_ERR_TIMEOUT) continue;
-//             else return ESP_FAIL;
-//         }
-
-//         // Update how much is left to read
-//         remaining -= ret;
-
-//         // Log the data that was received
-//         ESP_LOGI(TAG, "=========== RECEIVED DATA ==========");
-//         ESP_LOGI(TAG, "%.*s", ret, buf);
-//         ESP_LOGI(TAG, "====================================");
-
-//         // Try and decode the request
-//         char response[16];
-//         if (httpd_query_key_value(buf, "theme", response, 15) == ESP_OK)
-//         {
-//             response[15] = '\0';
-//             ESP_LOGI(TAG, "Found light effect match: %s", response);
-//         }
-//         else
-//         {
-//             ESP_LOGI(TAG, "Could not find light effect match");
-//         }
-//     }
-
-//     // Send response to close request
-//     httpd_resp_send(req, indexHTML, HTTPD_RESP_USE_STRLEN);
-//     return ESP_OK;
-// }
-
-// static const httpd_uri_t homeURI = {
-//     .uri       = "/",
-//     .method    = HTTP_GET,
-//     .handler   = homeGETHandler,
-//     .user_ctx  = NULL
-// };
-
-// static const httpd_uri_t lightEffectURI = {
-//     .uri       = "/",
-//     .method    = HTTP_POST,
-//     .handler   = lightEffectPOSTHandler,
-//     .user_ctx  = NULL
-// };
-
-// static httpd_handle_t startHTTPServer(void)
-// {
-//     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
-//     config.lru_purge_enable = true;
-
-//     ESP_LOGI(TAG, "Starting server on port: '%d'", config.server_port);
-//     if (httpd_start(&server, &config) == ESP_OK) {
-//         // Setup URI handlers
-//         ESP_LOGI(TAG, "Registering URI handlers");
-//         httpd_register_uri_handler(server, &homeURI);
-//         httpd_register_uri_handler(server, &lightEffectURI);
-//         return server;
-//     }
-
-//     ESP_LOGI(TAG, "Error starting server!");
-//     return NULL;
-// }
-
-// static void disconnectHandler(void* arg, esp_event_base_t event_base,
-//                                int32_t event_id, void* event_data)
-// {
-//     ESP_LOGI(TAG, "Station Disconnected, stopping HTTP server");
-//     if (httpd_stop(server) == ESP_OK) 
-//     {
-//         server = NULL;
-//     } 
-//     else 
-//     {
-//         ESP_LOGE(TAG, "Failed to stop HTTP server");
-//     }
-    
-// }
-
-// static void connectHandler(void* arg, esp_event_base_t event_base,
-//                             int32_t event_id, void* event_data)
-// {
-//     // Got assigned an IP address, either it was changed or we reconnected, either way start the server
-//     ESP_LOGI(TAG, "Starting webserver");
-//     startHTTPServer();
-// }
-
-// esp_err_t startServer(void)
-// {
-//     // Register callbacks to know if the WiFi connection gets interrupted (not really robust yet)
-//     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &connectHandler, NULL));
-//     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, WIFI_EVENT_STA_DISCONNECTED, &disconnectHandler, NULL));
-
-//     if (startHTTPServer() != NULL)
-//     {
-//         return ESP_OK;
-//     }
-//     else 
-//     {
-//         return ESP_FAIL;
-//     }    
-// }
+void appServerInit(void)
+{
+    newEffectQueueHandle = xQueueCreateStatic(EFFECT_QUEUE_MAX_ITEMS, 
+                                              sizeof(CubeEffectMessage), 
+                                              newEffectQueueBuffer,
+                                              &newEffectQueue);
+}

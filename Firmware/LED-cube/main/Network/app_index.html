@@ -7,6 +7,23 @@
         <title>LED Cube</title>
     </head>
     <body>
+        <p>Select an active light theme:</p>
+        <form action="/light-effect" method="POST">
+            <!-- The value of the effect must match the enum in effects.h -->
+            <input type="radio" id="off" name="theme" value="1">
+            <label for="off">All Off</label><br>
+
+            <input type="radio" id="noise" name="theme" value="4">
+            <label for="noise">Noise</label><br>
+            <br>
+
+            <input type="range" id="bright" name="brightness" value="20" min="0" max="100">
+            <p>Brightness: <span id="currentBright"></span></p>
+            <br> 
+
+            <button type="submit">Update</button>
+        </form> 
+
         <script defer>
             // Send a GET request for the battery voltage every 2500 ms
             async function requestBatteryVoltage() {
@@ -20,22 +37,15 @@
                 }
             }
             setInterval(requestBatteryVoltage, 2500);
+
+            var brightSlider = document.getElementById("bright");
+            var output = document.getElementById("currentBright");
+            output.innerHTML = brightSlider.value;
+
+            brightSlider.oninput = function() {
+                output.innerHTML = this.value;
+            }
         </script>
-
-        <p>Select an active light theme:</p>
-        <form action="/light-effect" method="POST">
-            <input type="radio" id="red" name="theme" value="0">
-            <label for="red">All Red</label><br>
-            <input type="radio" id="green" name="theme" value="1">
-            <label for="green">All Green</label><br>
-            <input type="radio" id="blue" name="theme" value="2">
-            <label for="blue">All Blue</label><br>
-            <input type="radio" id="noise" name="theme" value="3">
-            <label for="noise">Noise</label><br>
-            <br>
-            <button type="submit">Update Theme</button>
-        </form> 
-
 
     </body>
 </html>

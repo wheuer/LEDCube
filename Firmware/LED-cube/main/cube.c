@@ -64,6 +64,7 @@ void clearPanel(uint8_t panel)
 // Brightness of all of the panels (tied together in hardware)
 void setBrightness(float brightness)
 {
+    if (brightness < 0 || brightness > 1.0) return;
     ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, (uint16_t) 8192 * (1 - brightness));
     ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
 }
@@ -179,6 +180,8 @@ void cubeInit(void)
     };
 
     ledc_channel_config(&ledc_channel);
+
+    setBrightness(0.20); // Ideally matches initial value in web server HTML
 
     /*
         Configure the 1ms cube tick timer that will trigger update events
