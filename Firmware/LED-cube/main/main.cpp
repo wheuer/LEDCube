@@ -32,6 +32,11 @@ static uint32_t effectUpdateIntervalCounter = 0;
 
 static CubeEffectMessage newCubeEffect;
 
+extern "C" Effect getCurrentEffect(void)
+{
+    return currentLightMode;
+}
+
 static void initPanels(void)
 {
     for (int i = 0; i < 6; i++)
@@ -48,6 +53,18 @@ static void updateCurrentEffect(void)
     switch (currentLightMode)
     {
         case CHARGING:
+            break;
+        case RED:
+            setAll((rgb_t) {1, 0, 0});
+            break;
+        case GREEN:
+            setAll((rgb_t) {0, 1, 0});
+            break;
+        case BLUE:
+            setAll((rgb_t) {0, 0, 1});
+            break;
+        case WHITE:
+            setAll((rgb_t) {1, 1, 1});
             break;
         case NOISE:
             fillRandom();
@@ -83,6 +100,8 @@ static void changeEffect(void)
             effectUpdateInterval = NOISE_UPDATE_INTERVAL;
             break;
         default:
+            // This currently covers red, green, blue, and white
+            effectUpdateInterval = DEFAULT_UPDATE_INTERVAL;
             break;
     }
     updateCurrentEffect();
@@ -114,18 +133,27 @@ extern "C" void app_main(void)
                 -> Increment update interval counter and update panels if needed
         */
        eventBits = xEventGroupWaitBits(powerEventGroup,
-                                       CHARGER_DISCONNECTED | CHARGER_CONNECTED | BATTERY_LOW,
+                                       CHARGER_DISCONNECTED | CHARGER_CONNECTED | BATTERY_LOW | BATTERY_OK,
                                        pdTRUE, // Clear on exit
                                        pdFALSE,
                                        TASK_BASE_UPDATE_INTERVAL / portTICK_PERIOD_MS);
 
-        if (eventBits) ESP_LOGI(TAG, "Event bits %d", (int) eventBits);
+        if (eventBits && !(eventBits & BATTERY_OK)) ESP_LOGI(TAG, "Event bits %d", (int) eventBits);
 
         if (eventBits & BATTERY_LOW && currentLightMode != WAIT_FOR_CHARGE)
         {
             // The battery is now uncomfortably low, save effect and transition to waiting for charge state
             previousLightMode = currentLightMode;
             currentLightMode = WAIT_FOR_CHARGE;
+            changeEffect();
+        }
+
+        if (eventBits & BATTERY_OK && currentLightMode == WAIT_FOR_CHARGE)
+        {
+            // We were waiting but now the battery voltage is good, could have been a glitch or large current spike
+            // Act like it never happened...
+            currentLightMode = previousLightMode;
+            previousLightMode = OFF;
             changeEffect();
         }
         

@@ -1,13 +1,13 @@
 #ifndef __HTTP_SERVER_H_
 #define __HTTP_SERVER_H_
 
-#include "esp_check.h"
-#include <esp_http_server.h>
-#include "effects.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include "esp_check.h"
+#include <esp_http_server.h>
+#include "effects.h"
 
 #define EFFECT_QUEUE_MAX_ITEMS 5
 

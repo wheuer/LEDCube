@@ -49,6 +49,7 @@ extern "C" {
 //     };
 // } rgb_t;
 
+// The actual color is binary with any non-zero value being considered "ON" 
 typedef struct
 {
     uint8_t red;
@@ -59,10 +60,12 @@ typedef struct
 extern bool frameBuffer[6][NUM_ROWS * NUM_COLUMNS * 3];
 
 void fillRandom(void);
+void setAll(rgb_t color);
 void cubeInit(void);
 void cubeStart(void);
 void cubePause(void);
 void setBrightness(float brightness); // 0.0 - 1.0
+float getCurrentBrightness(void);
 void setPixel(uint8_t panel, uint8_t x, uint8_t y, rgb_t color);
 void clearPanel(uint8_t panel);
 

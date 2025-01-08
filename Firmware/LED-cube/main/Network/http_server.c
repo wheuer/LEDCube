@@ -8,6 +8,7 @@
 #include "Network/http_server.h"
 #include "Power/power.h"
 #include "effects.h"
+#include "cube.h"
 
 #define MIN(a,b) ((a) < (b) ? a : b)
 
@@ -23,20 +24,25 @@ extern const uint8_t app_index_html_end[] asm("_binary_app_index_html_end");
 
 esp_err_t appGETHandler(httpd_req_t* request)
 {
+    char buffer[32];
     if(strcmp(request->uri, "/") == 0)
     {
         httpd_resp_set_status(request, http_200_hdr);
         httpd_resp_set_type(request, http_content_type_html);
         httpd_resp_send(request, (char*)app_index_html_start, app_index_html_end - app_index_html_start);
     }
-    else if (strcmp(request->uri, "/battery-voltage") == 0) 
+    else if (strcmp(request->uri, "/check-in") == 0) 
     {
-        // Read battery voltage and send as a string
-        // Only give 2 decimal precision, limited by ADC anyway
+        // Send back four things: current effect, battery voltage, brightness level, and charge status
         float voltage = getBatteryVoltage();
-        char buffer[5];
-        snprintf(buffer, 5, "%.2f", voltage);
+        Effect currentEffect = getCurrentEffect();
+        int brightness = getCurrentBrightness() * 100;
+        bool chargeStatus = getChargeStatus();
+
+        snprintf(buffer, 32, "effect=%i&bv=%.2f&bl=%i&cs=%i", currentEffect, voltage, brightness, chargeStatus);
+
         httpd_resp_set_status(request, http_200_hdr);
+        httpd_resp_set_type(request, http_content_type_text);
         httpd_resp_send(request, buffer, HTTPD_RESP_USE_STRLEN);
     }
     else

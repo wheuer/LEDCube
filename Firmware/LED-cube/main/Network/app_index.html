@@ -6,38 +6,95 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>LED Cube</title>
     </head>
+    <style>
+        .row {
+            display: flex;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .column {
+            max-width: fit-content;
+            margin-left: 2em;
+            margin-right: 2em;
+            margin-top: auto;
+            margin-bottom: auto;
+            flex: 50%;
+            text-align: center;
+            font-size: large;
+        }
+
+        .device-info {
+            text-align: left;
+        }
+        
+        @media (max-width: 800px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+    </style>
     <body>
-        <p>Select an active light theme:</p>
-        <form action="/light-effect" method="POST">
-            <!-- The value of the effect must match the enum in effects.h -->
-            <input type="radio" id="off" name="theme" value="1">
-            <label for="off">All Off</label><br>
+        <div class="row">
+            <div class="column">
+                <p>Update the Current Theme:</p>
+                <form id="theme-form" action="/light-effect" method="POST">
+                    <!-- 
+                    The value of the effect must match the enum in effects.h
+                    INVALID = 0
+                    NO_CHANGE = 1
+                    OFF = 2
+                    CHARGING = 3  
+                    WAIT_FOR_CHARGE = 4
+                    RED = 5
+                    GREEN = 6
+                    BLUE = 7
+                    WHITE = 8
+                    NOISE = 9
+                    -->
+                    <input type="radio" id="off" name="theme" value="2" checked>
+                    <label for="off">All Off</label><br>
+    
+                    <input type="radio" id="red" name="theme" value="5">
+                    <label for="red">All Red</label><br>
 
-            <input type="radio" id="noise" name="theme" value="4">
-            <label for="noise">Noise</label><br>
-            <br>
+                    <input type="radio" id="green" name="theme" value="6">
+                    <label for="green">All Green</label><br>
 
-            <input type="range" id="bright" name="brightness" value="20" min="0" max="100">
-            <p>Brightness: <span id="currentBright"></span></p>
-            <br> 
+                    <input type="radio" id="blue" name="theme" value="7">
+                    <label for="blue">All Blue</label><br>
 
-            <button type="submit">Update</button>
-        </form> 
+                    <input type="radio" id="white" name="theme" value="8">
+                    <label for="white">All White</label><br>
+
+                    <input type="radio" id="noise" name="theme" value="9">
+                    <label for="noise">Noise</label><br>
+                    <br>
+    
+                    <input type="range" id="bright" name="brightness" value="20" min="0" max="100">
+                    <p style="margin: 0;">Brightness: <span id="currentBright"></span></p>
+                    <br> 
+    
+                    <button type="submit">Update</button>
+                </form> 
+            </div>
+            <div class="column device-info">
+                <p>Connection Status: <span id="connection-status">Not Connected</span></p>
+                <p>Current Effect: <span id="current-effect">Unknown</span></p>
+                <p>Current Brightness: <span id="current-brightness">Unknown</span></p>
+                <p>Battery Voltage: <span id="bat-voltage">0.00 V</span></p>
+                <p>Charging State: <span id="charge-state">Unknown</span></p>
+            </div>
+        </div>
 
         <script defer>
-            // Send a GET request for the battery voltage every 2500 ms
-            async function requestBatteryVoltage() {
-                try {
-                    const response = await fetch('/battery-voltage');
-                    if (!response.ok) throw new Error(`Battery Voltage Response Status: ${response.status}`);
-                    const data = await response.text();
-                    console.log(data);
-                } catch (error) {
-                    console.log(error.message);
-                }
-            }
-            setInterval(requestBatteryVoltage, 2500);
+            // Create lookup table for effects and update status flag
+            const effectLookup = ["Invalid", "No Change", "Off", "Charging", "Waiting for Charge", "All Red", "All Green", "All Blue", "All White", "Noise"]
+            var updateStatusFlag = false;
 
+            // Setup the interactive brightness slider
             var brightSlider = document.getElementById("bright");
             var output = document.getElementById("currentBright");
             output.innerHTML = brightSlider.value;
@@ -45,6 +102,74 @@
             brightSlider.oninput = function() {
                 output.innerHTML = this.value;
             }
+
+            // Grab the dynamic information HTML elements
+            var connectionStatus = document.getElementById("connection-status");
+            var currentEffect = document.getElementById("current-effect");
+            var currentBrightness = document.getElementById("current-brightness");
+            var batteryVoltage = document.getElementById("bat-voltage");
+            var chargeState = document.getElementById("charge-state");
+
+            // Send a GET request for device information every 2500 ms and when the form is submitted
+            async function getHardwareUpdate() {
+                try {
+                    const response = await fetch('/check-in');
+                    if (!response.ok) throw new Error(`Hardware Update Error, Response Status: ${response.status}`);
+                    const data = await response.text();
+                    // const data = "effect=2&bv=4.20&bl=20&cs=1";
+                    connectionStatus.innerHTML = "Connected";
+
+                    const dataPairs = data.split('&');
+                    for (let i = 0; i < dataPairs.length; i++) {
+                        var pair = dataPairs[i].split('=');
+                        switch (pair[0]) {
+                            case 'effect':
+                                // Use lookup table to change effect, ignoring invalid and no change as they are not really effects
+                                if (pair[1] >= 2) currentEffect.innerHTML = effectLookup[pair[1]];
+                                break;
+                            case 'bv':
+                                batteryVoltage.innerHTML = String(pair[1]) + " V";
+                                break;
+                            case 'bl':
+                                currentBrightness.innerHTML = String(pair[1]);
+                                if (!updateStatusFlag) // Don't want to override slider after initial update in case the user is using it
+                                {   
+                                    output.innerHTML = pair[1];
+                                    brightSlider.value = pair[1];
+                                }
+                                break;
+                            case 'cs':
+                                if (pair[1] == 1)
+                                {
+                                    chargeState.innerHTML = "Charging";
+                                }
+                                else
+                                {
+                                    chargeState.innerHTML = "Not Charging";
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    updateStatusFlag = true;
+
+                } catch (error) {
+                    connectionStatus.innerHTML = "Disconnected";
+                    currentEffect.innerHTML = "Unknown";
+                    currentBrightness.innerHTML = "Unknown";
+                    batteryVoltage.innerHTML = "Unknown";
+                    chargeState.innerHTML = "Unknown";
+                    console.log(error.message);
+                }
+            }
+
+            form = document.getElementById("theme-form");
+            // form.addEventListener("submit", getHardwareUpdate); // Always update right after a user input
+            getHardwareUpdate();
+            setInterval(getHardwareUpdate, 2500);
+
         </script>
 
     </body>

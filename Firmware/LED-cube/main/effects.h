@@ -4,9 +4,14 @@
 // The effect order here must match the HTML for the web server
 typedef enum Effect {
     INVALID = 0,
+    NO_CHANGE,
     OFF,
     CHARGING,
     WAIT_FOR_CHARGE,
+    RED,
+    GREEN,
+    BLUE,
+    WHITE,
     NOISE,
     EFFECT_COUNT_OVERFLOW // Used to check invalid requests
 } Effect;
@@ -27,5 +32,6 @@ typedef enum Effect {
 // NOISE
 #define NOISE_UPDATE_INTERVAL   10 // 200 ms
 
+Effect getCurrentEffect(void);
 
 #endif // __EFFECTS_H_

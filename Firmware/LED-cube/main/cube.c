@@ -16,6 +16,7 @@
 #include "cube.h"
 
 static esp_timer_handle_t cubeTickTimer;
+static float currentBrightness = 0.0;
 
 // Private fast version of frame buffer
 // Two values for all panels, first value are the bits to set and the second are the bits to clear
@@ -48,6 +49,15 @@ void fillRandom(void)
     }
 }
 
+// Set all the panels to a solid color
+void setAll(rgb_t color)
+{
+    for (int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < NUM_ROWS * NUM_COLUMNS * 3; j+=3) memcpy(&frameBuffer[i][j], &color, sizeof(color));
+    }
+}
+
 void setPixel(uint8_t panel, uint8_t x, uint8_t y, rgb_t color)
 {
     // No out of bounds check here for the sake of speed, need to handle before calling this function
@@ -65,8 +75,14 @@ void clearPanel(uint8_t panel)
 void setBrightness(float brightness)
 {
     if (brightness < 0 || brightness > 1.0) return;
+    currentBrightness = brightness;
     ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, (uint16_t) 8192 * (1 - brightness));
     ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
+}
+
+float getCurrentBrightness(void)
+{
+    return currentBrightness;
 }
 
 static void convertFastFrameBuffer(void)

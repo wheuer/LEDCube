@@ -11,13 +11,16 @@ const static char* TAG = "[POWER-MONITOR]";
 
 EventGroupHandle_t powerEventGroup; 
 static esp_timer_handle_t powerUpdateTimer;
-static float currentBatteryVoltage;
+static uint8_t batteryVoltageIndex = 0;
+static bool voltageStable = false; // We have not taken at least BATTERY_MEASUREMENTS_PER_REPORT yet, it would be skewed by zeros in buffer
+static float averageBatteryVoltage; // Over the last BATTERY_MEASUREMENTS_PER_REPORT raw readings 
+static float batteryVoltages[BATTERY_MEASUREMENTS_PER_REPORT];
 static bool previousChargingStatus = false;
 static bool chargingStatus = false;
 
 float getBatteryVoltage(void)
 {
-    return currentBatteryVoltage;
+    return averageBatteryVoltage;
 }
 
 bool getChargeStatus(void)
@@ -30,7 +33,25 @@ static void updateStatus(void* args)
     // Update
     previousChargingStatus = chargingStatus;
     chargingStatus = isCharging();
-    currentBatteryVoltage = readBatteryVoltage();
+    batteryVoltages[batteryVoltageIndex] = readBatteryVoltage();
+
+    // Mark the first time the buffer fills aka first "real" measurement
+    if (batteryVoltageIndex == 9) voltageStable = true;
+
+    // Make sure the first measuremetns are not skewed by a partially zeroed buffer
+    if (voltageStable)
+    {
+        float sum = 0.0;
+        for (int i = 0; i < BATTERY_MEASUREMENTS_PER_REPORT; i++) sum += batteryVoltages[i];
+        averageBatteryVoltage = sum / BATTERY_MEASUREMENTS_PER_REPORT;
+    } 
+    else
+    {
+        averageBatteryVoltage = batteryVoltages[batteryVoltageIndex];
+    }
+
+    // Increment with wrapping 
+    batteryVoltageIndex = (batteryVoltageIndex + 1) % BATTERY_MEASUREMENTS_PER_REPORT;
 
     // Send events if needed
     uint32_t eventBits = 0;
@@ -45,9 +66,13 @@ static void updateStatus(void* args)
         ESP_LOGI(TAG, "Charger disconnected");
     }
 
-    if (currentBatteryVoltage <= BATTERY_LOW_THRESHOLD)
+    if (averageBatteryVoltage <= BATTERY_LOW_THRESHOLD)
     {
         eventBits |= BATTERY_LOW;
+    }
+    else if (averageBatteryVoltage >= BATTERY_OK_THRESHOLD)
+    {
+        eventBits |= BATTERY_OK;
     }
 
     if (eventBits) xEventGroupSetBits(powerEventGroup, eventBits);
@@ -74,8 +99,8 @@ void powerInit(void)
 
     // Set initial state
     chargingStatus = isCharging();
-    currentBatteryVoltage = readBatteryVoltage();
+    averageBatteryVoltage = readBatteryVoltage();
 
-    // Start updating the status every 250 ms
-    esp_timer_start_periodic(powerUpdateTimer, 250 * 1000);
+    // Start updating the status every POWER_UPDATE_INTERVAL ms
+    esp_timer_start_periodic(powerUpdateTimer, POWER_UPDATE_INTERVAL * 1000);
 }
