@@ -121,6 +121,7 @@ esp_err_t appPOSTHandler(httpd_req_t* request)
 
 void appServerInit(void)
 {
+    // Create queue for storing new cube effect messages (requests to change effect)
     newEffectQueueHandle = xQueueCreateStatic(EFFECT_QUEUE_MAX_ITEMS, 
                                               sizeof(CubeEffectMessage), 
                                               newEffectQueueBuffer,
